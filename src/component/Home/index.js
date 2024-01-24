@@ -373,7 +373,7 @@ class Home extends Component {
                 alt="trophy"
                 className="trophy-img"
               />
-              <h1>YOUR SCORE</h1>
+              <p>YOUR SCORE</p>
               <h1>{score}</h1>
               <button
                 type="button"
