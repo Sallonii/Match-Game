@@ -1,0 +1,13 @@
+.list-container {
+  list-style-type: none;
+}
+.match-img {
+  height: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .match-img {
+    height: 120px;
+    margin: 20px;
+  }
+}

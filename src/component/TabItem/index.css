@@ -1,0 +1,19 @@
+.list-container {
+  list-style-type: none;
+  margin: 10px;
+}
+.tab-text {
+  font-size: 25px;
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  cursor: pointer;
+}
+.active-tab-btn {
+  border-color: #fec653;
+  color: #fec653;
+}
