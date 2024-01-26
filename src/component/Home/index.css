@@ -37,6 +37,11 @@ span {
 .timer-cont {
   list-style-type: none;
   margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.timer-text {
+  color: #fec653;
 }
 .content-container {
   display: flex;
