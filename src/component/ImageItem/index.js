@@ -1,23 +1,26 @@
 import './index.css'
 
-const ImageItem = props => {
-  const {ImageDetails, clickImageItem} = props
-  const {id, imageUrl, thumbnailUrl, category} = ImageDetails
+const TabItem = props => {
+  const {eachTabDetails, clickTabItem, isActive} = props
+  const {tabId, displayText} = eachTabDetails
 
-  const onClickingImage = () => {
-    clickImageItem(imageUrl)
+  const activeTabClassname = isActive ? 'active-tab-btn' : ''
+
+  const onClickingTab = () => {
+    clickTabItem(tabId)
   }
 
   return (
     <li className="list-container">
-      <img
-        src={thumbnailUrl}
-        alt="thumbnail"
-        className="match-img"
-        onClick={onClickingImage}
-      />
+      <button
+        type="button"
+        className={`tab-text ${activeTabClassname}`}
+        onClick={onClickingTab}
+      >
+        {displayText}
+      </button>
     </li>
   )
 }
 
-export default ImageItem
+export default TabItem
