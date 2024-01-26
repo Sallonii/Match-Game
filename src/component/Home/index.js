@@ -265,11 +265,12 @@ class Home extends Component {
 
   tick = () => {
     const {timer} = this.state
-    this.setState(prevState => ({timer: prevState.timer - 1}))
 
-    if (timer === 1) {
+    if (timer === 0) {
       clearInterval(this.timerId)
       this.setState(prevState => ({isGameOver: true}))
+    } else {
+      this.setState(prevState => ({timer: prevState.timer - 1}))
     }
   }
 
@@ -337,7 +338,7 @@ class Home extends Component {
                 alt="timer"
                 className="timer"
               />
-              <p>{timer} sec</p>
+              <p className="timer-text">{timer} sec</p>
             </li>
           </ul>
         </nav>
@@ -359,6 +360,7 @@ class Home extends Component {
                 <ImageItem
                   ImageDetails={eachImageItem}
                   clickImageItem={this.clickImageItem}
+                  key={eachImageItem.id}
                 />
               ))}
             </ul>
