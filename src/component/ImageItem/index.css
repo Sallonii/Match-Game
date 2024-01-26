@@ -11,3 +11,7 @@
     margin: 20px;
   }
 }
+.img-btn {
+  background-color: transparent;
+  border: none;
+}
